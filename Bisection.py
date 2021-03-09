@@ -5,7 +5,7 @@
 #   - Inputs:(f, interval)
 #   --- f: lambda representation of function
 #   --- interval: array contanining search interval (i.e. [-2, 0])
-#   - Output: value of function
+#   - Output: approximation of root or None if DNE
 #==========================================================================
 
 def bisection(f, interval):
