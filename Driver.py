@@ -32,6 +32,7 @@ def plot(func):
     plt.show()
 
 
+print()
 print("Root Finding Driver Class")
 print("By Henry Song")
 print()
