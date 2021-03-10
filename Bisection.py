@@ -19,7 +19,7 @@ def bisection(f, interval):
     #checks if a root exists by checking f(a)*f(b) (MUST be negative)
     if f(a)*f(b) >= 0: return None
 
-    for i in range(1, n+1):
+    for i in range(n):
         m = (a + b)/2
 
         #checks if root is the midpoint
