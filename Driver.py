@@ -32,21 +32,23 @@ def plot(func):
     plt.show()
 
 
-print()
-print("Root Finding Driver Class")
-print("By Henry Song")
-print()
-print("Using f(x) = 5𝑥^3 − 20𝑥^2 + 5𝑥 + 30 over [-2, 0], [0, 2.5], [2.5, 4]")
-print()
-
-# Function & interval definitions
+# Function definitions
 x = sym.symbols('x')
 equation = 5*(x**3) - 20*(x**2) + 5*x + 30  # equation that will be used for root-finding methods
 f = sym.lambdify(x, equation)   #lambda representation of equation
 f_prime = sym.lambdify(x, sym.diff(equation))   #lambda representation of derivative of equation
+
+#interval definitions
 interval_1 = [-2, 0]
 interval_2 = [0, 2.5]
 interval_3 = [2.5, 4]
+
+print()
+print("Root Finding Driver Class")
+print("By Henry Song")
+print()
+print("Using f(x) = ", equation, " over ", interval_1, ", ", interval_2, ", ", interval_3)
+print()
 
 #continuous loop to run each method individually with user selecting used method each iteration
 while(True):
