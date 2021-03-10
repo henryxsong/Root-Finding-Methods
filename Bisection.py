@@ -20,6 +20,7 @@ def bisection(f, interval):
     if f(a)*f(b) >= 0: return None
 
     for i in range(n):
+        #estimate for root (midpoint)
         m = (a + b)/2
 
         #checks if root is the midpoint
@@ -29,5 +30,6 @@ def bisection(f, interval):
         #checks if same signs
         elif f(a)*f(m) > 0: a = m
         
+        # print statement used for testing
         #print("[", a, ", ", b , "]")
     return (a + b)/2
