@@ -19,11 +19,16 @@ def secant(f, interval):
     #checks if a root exists by checking f(a)*f(b) (MUST be negative)
     if f(a)*f(b) >= 0: return None
 
-    for i in range(1,n+1):
-        m = a - f(a)*(b - a)/(f(b) - f(a))
+    for i in range(n):
+        # estimate for root
+        xn = a - f(a)*(b - a)/(f(b) - f(a))
         
-        if f(a)*f(m) < 0: b = m
-        elif f(a)*f(m) > 0: a = m
-        elif f(m) == 0: return m
-        else: return None
+        if f(xn) == 0: return xn    #found exact root
+        #shifts variables 
+        elif f(a)*f(xn) > 0: a = xn
+        elif f(a)*f(xn) < 0: b = xn
+        else: return None   #does not converge
+
+        # print statement used for testing
+        # print("[", a, ", ", b , "]")
     return a - f(a)*(b - a)/(f(b) - f(a))
