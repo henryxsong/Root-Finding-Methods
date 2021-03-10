@@ -63,24 +63,24 @@ while(True):
 
     if option == 1:
         print("Bisection Method:")
-        print("Over interval [-2, 0]:\t", bisection(f, interval_1))
-        print("Over interval [0, 2.5]:\t", bisection(f, interval_2))
-        print("Over interval [2.5, 4]:\t", bisection(f, interval_3))
+        print("Over interval", interval_1 ,"\t:\t", bisection(f, interval_1))
+        print("Over interval", interval_2 ,"\t:\t", bisection(f, interval_2))
+        print("Over interval", interval_3 ,"\t:\t", bisection(f, interval_3))
     elif option == 2:
         print("Newton's Method:")
-        print("Over interval [-2, 0]:\t", newton(f, f_prime, -2, 0.000000001))
-        print("Over interval [0, 2.5]:\t", newton(f, f_prime, 1, 0.000000001))
-        print("Over interval [2.5, 4]:\t", newton(f, f_prime, 4, 0.000000001))
+        print("Over interval", interval_1 ,"\t:\t", newton(f, f_prime, -2, 0.000000001))
+        print("Over interval", interval_2 ,"\t:\t", newton(f, f_prime, 1, 0.000000001))
+        print("Over interval", interval_3 ,"\t:\t", newton(f, f_prime, 4, 0.000000001))
     elif option == 3:
         print("Secant Method:")
-        print("Over interval [-2, 0]:\t", secant(f, interval_1))
-        print("Over interval [0, 2.5]:\t", secant(f, interval_2))
-        print("Over interval [2.5, 4]:\t", secant(f, interval_3))
+        print("Over interval", interval_1 ,"\t:\t", secant(f, interval_1))
+        print("Over interval", interval_2 ,"\t:\t", secant(f, interval_2))
+        print("Over interval", interval_3 ,"\t:\t", secant(f, interval_3))
     elif option == 4:
         print("Falsi Method:")
-        print("Over interval [-2, 0]:\t", falsi(f, interval_1))
-        print("Over interval [0, 2.5]:\t", falsi(f, interval_2))
-        print("Over interval [2.5, 4]:\t", falsi(f, interval_3))
+        print("Over interval", interval_1 ,"\t:\t", falsi(f, interval_1))
+        print("Over interval", interval_2 ,"\t:\t", falsi(f, interval_2))
+        print("Over interval", interval_3 ,"\t:\t", falsi(f, interval_3))
     else:
         break
 
