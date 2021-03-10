@@ -33,7 +33,7 @@ def plot(func):
 
 
 # Function definitions
-x = sym.symbols('x')
+x = sym.symbols('x')    # define x as a variable (needed for lambda function)
 equation = 5*(x**3) - 20*(x**2) + 5*x + 30  # equation that will be used for root-finding methods
 f = sym.lambdify(x, equation)   #lambda representation of equation
 f_prime = sym.lambdify(x, sym.diff(equation))   #lambda representation of derivative of equation
@@ -47,7 +47,7 @@ print()
 print("Root Finding Driver Class")
 print("By Henry Song")
 print()
-print("Using f(x) = ", equation, " over ", interval_1, ", ", interval_2, ", ", interval_3)
+print("Using f(x) = ", equation, " over ", interval_1, ",", interval_2, ",", interval_3)
 print()
 
 #continuous loop to run each method individually with user selecting used method each iteration
