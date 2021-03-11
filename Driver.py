@@ -68,9 +68,9 @@ while(True):
         print("Over interval", interval_3 ,"\t:\t", bisection(f, interval_3))
     elif option == 2:
         print("Newton's Method:")
-        print("Over interval", interval_1 ,"\t:\t", newton(f, f_prime, -2, 0.000000001))
-        print("Over interval", interval_2 ,"\t:\t", newton(f, f_prime, 1, 0.000000001))
-        print("Over interval", interval_3 ,"\t:\t", newton(f, f_prime, 4, 0.000000001))
+        print("Over interval", interval_1 ,"\t:\t", newton(f, f_prime, 0))
+        print("Over interval", interval_2 ,"\t:\t", newton(f, f_prime, 1))
+        print("Over interval", interval_3 ,"\t:\t", newton(f, f_prime, 4))
     elif option == 3:
         print("Secant Method:")
         print("Over interval", interval_1 ,"\t:\t", secant(f, interval_1))
@@ -84,7 +84,11 @@ while(True):
     else:
         break
 
-    plot(f)
+    plot_option = str(input("Plot graph (y/n): "))
+    while plot_option not in ("y", "n"): plot_option = input("Please enter valid option (y/n): ")
+    if plot_option[0] == "y":
+        plot(f)
+    
     print("----------------------------------------------------")
     print()
     
